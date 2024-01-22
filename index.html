@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Rockwell';
+            background-color: linear-gradient(to right, #161616, #585858);
+            color: linear-gradient(to right, #161616, #585858);
+            overflow-x: hidden; /* To hide horizontal scrollbar */
+        }
+
+        .notebook-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: repeating-linear-gradient(transparent, transparent 30px, #ddd 30px, #ddd 40px);
+            pointer-events: none; /* Make sure the background doesn't interfere with user input */
+            z-index: -1; /* Move it behind other elements */
+        }
+
+        .red-line {
+            position: fixed;
+            top: 0;
+            left: 20px; /* Adjust the spacing from the edge */
+            height: 100%;
+            width: 10px; /* Adjust the width of the red line */
+            background-color: red;
+            z-index: 2; /* Move it above the notebook background */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px; /* Increased padding for more space */
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h4 {
+            text-align: center;
+            margin-bottom: 30px; /* Increased margin-bottom for more space */
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 400px; /* Increased height for a larger text box */
+            padding: 15px; /* Increased padding for more space inside the text box */
+            box-sizing: border-box;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(to right, #161616, #585858);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <title>Your Journal App</title>
+</head>
+<body>
+    <div class="notebook-background"></div>
+    <div class="red-line"></div>
+    <div class="container">
+        <h1>SENTI-JOURNAL</h1>
+        <h4>Capture and express all your thoughts, feelings, both sentimental and not, right here in one digital journal! Where no one can see what you're writing!</h4>
+        <textarea placeholder="Start typing your thoughts..."></textarea>
+    </div>
+    <footer>
+        &copy; 2024 LIVE-LY© All rights reserved
+    </footer>
+</body>
+</html>
